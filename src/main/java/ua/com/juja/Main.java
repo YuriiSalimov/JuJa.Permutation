@@ -8,7 +8,7 @@ public class Main {
     public static void main(String[] args) {
         final String str = "algorithm";
         final Permutation<String> permutation = new StringPermutation();
-        //permutation.print(str);
+        permutation.print(str);
         analyzeCreate(permutation, str);
     }
 
