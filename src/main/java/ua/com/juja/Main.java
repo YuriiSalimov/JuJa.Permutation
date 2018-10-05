@@ -17,7 +17,7 @@ public class Main {
      * создания перестановок переданой строки.
      */
     private static void analyzeCreate(final Permutation<String> permutation, final String str) {
-        final int iterationNumbers = 1000;
+        final int iterationNumbers = 100;
         long time = 0;
         for (int i = 0; i < iterationNumbers; i++) {
             time -= System.currentTimeMillis();
