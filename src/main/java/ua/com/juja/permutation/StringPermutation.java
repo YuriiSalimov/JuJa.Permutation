@@ -16,9 +16,11 @@ public final class StringPermutation implements Permutation<String> {
     @Override
     public Collection<String> create(final String str) {
         final Collection<String> permutations = new ArrayList<>();
-        final Iterator<String> permutationIterator = createStringIterator(str);
-        while (permutationIterator.hasNext()) {
-            permutations.add(permutationIterator.next());
+        if (isNotEmpty(str)) {
+            final Iterator<String> permutationIterator = createStringIterator(str);
+            while (permutationIterator.hasNext()) {
+                permutations.add(permutationIterator.next());
+            }
         }
         return permutations;
     }
@@ -60,5 +62,9 @@ public final class StringPermutation implements Permutation<String> {
             indexes[i] = index;
         }
         return indexes;
+    }
+
+    private boolean isNotEmpty(final String str) {
+        return (str != null) && (!str.isEmpty());
     }
 }
