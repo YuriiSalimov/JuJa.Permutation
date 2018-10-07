@@ -12,23 +12,14 @@ import java.util.*;
  * символов строки.
  */
 public final class StringPermutation implements Permutation<String> {
-
+    
     @Override
-    public Collection<String> create(final String str) {
-        final Collection<String> permutations = new ArrayList<>();
+    public void print(final String str) {
         if (isNotEmpty(str)) {
             final Iterator<String> permutationIterator = createStringIterator(str);
             while (permutationIterator.hasNext()) {
-                permutations.add(permutationIterator.next());
+                System.out.println(permutationIterator.next());
             }
-        }
-        return permutations;
-    }
-
-    @Override
-    public void print(final String str) {
-        for (String permutation : create(str)) {
-            System.out.println(permutation);
         }
     }
 
