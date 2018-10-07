@@ -11,7 +11,7 @@ import java.util.*;
  * используется итератор перебора индексов уникальных
  * символов строки.
  */
-public final class StringPermutation implements Permutation<String> {
+public final class StringPermutation implements Permutation {
     
     @Override
     public void print(final String str) {
